@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
-import Header from "./component/Header/Header"
-import Input from './component/Input/Input';
-import Main from "./component/Main/Main";
+import Button from "./component/Button/Button";
+import Theme from './component/Theme/Theme';
+
 function App() {
   return (
     <div className="App">
-     <Header />
-     <Input />
-     <Main />
+      <div className='main'>
+      <Theme />
+     <Button />
+      </div>
     </div>
   );
 }
