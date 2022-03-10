@@ -1,31 +1,48 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import {
+  calculateValue,
+  inputValue,
+  numberValue,
+  deleteValue,
+  resetValue,
+} from "../../redux/action";
+
 import { FormControl } from "react-bootstrap";
 import "./Button.css";
 
 export default function Button() {
-  const [result, setResult] = useState("");
+  const dispatch = useDispatch();
+  const result = useSelector((state) => state.result);
+  // const [result, setResult] = useState("");
 
   const handleChange = () => {
-    setResult(result);
+    dispatch(inputValue());
+    // setResult(result);
   };
 
   const handleClick = (event) => {
-    setResult(result.concat(event.target.value));
-    console.log(event.target.value)
+    dispatch(numberValue());
+    // setResult(result + event.target.value);
+    // console.log(event.target.value);
   };
 
   const handleDelete = () => {
-    try {
-      setResult(result.slice(0, -1));
-    } catch (error) {
-      setResult("");
-    }
+    dispatch(deleteValue());
+    // try {
+    //   setResult(result.slice(0, -1));
+    // } catch (error) {
+    //   setResult("");
+    // }
   };
   const handleReset = () => {
-    setResult("");
+    dispatch(resetValue());
+    // setResult("");
   };
   const handleResult = () => {
+    dispatch(calculateValue());
     // try{
     //   setResult(eval(result))
     // }catch(error){
@@ -37,7 +54,7 @@ export default function Button() {
       <div>
         <FormControl
           className="input"
-          type="number"
+          type="text"
           value={result}
           onChange={handleChange}
         />
