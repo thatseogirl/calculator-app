@@ -1,8 +1,8 @@
 export function calculateValue(value){
-    return{
-        type: "CALCULATE_VALUE",
-        payload: value
-    }
+    return {
+      type: "CALCULATE_VALUE",
+      payload: value, //made change here
+    };
 }
 export function inputValue(){
     return{
@@ -10,10 +10,10 @@ export function inputValue(){
     }
 }
 export function numberValue(value){
-    return{
-        type: "NUMBER_VALUE",
-        payload: value
-    }
+    return {
+      type: "NUMBER_VALUE",
+      payload: value, //made change here
+    };
 }
 export function deleteValue(){
     return{

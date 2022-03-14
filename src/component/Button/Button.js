@@ -24,8 +24,7 @@ export default function Button() {
   };
 
   const handleClick = (event) => {
-
-     dispatch(numberValue(event.target.value));
+    dispatch(numberValue(event.target.value)); //made change here
     // setResult(result + event.target.value);
     // console.log(event.target.value);
   };
@@ -43,7 +42,7 @@ export default function Button() {
     // setResult("");
   };
   const handleResult = () => {
-    dispatch(calculateValue(eval(result)));
+    dispatch(calculateValue(eval(result))); //made change here
     // try{
     //   setResult(eval(result))
     // }catch(error){
