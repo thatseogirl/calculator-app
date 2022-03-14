@@ -6,7 +6,7 @@ function calculateReducer(state = initialState, action) {
     case "CALCULATE_VALUE":
       return {
         ...state,
-        result: state.result,
+        result: action.payload,
       };
     case "INPUT_VALUE":
       return {
@@ -16,17 +16,17 @@ function calculateReducer(state = initialState, action) {
     case "NUMBER_VALUE":
       return {
         ...state,
-        result: state.result,
+        result: state.result + action.payload,
       };
     case "DELETE_VALUE":
       return {
         ...state,
-        result: state.result,
+        result: action.payload,
       };
     case "RESET_VALUE":
       return {
         ...state,
-        result: state.result,
+        result: action.payload,
       };
     default:
       return state;

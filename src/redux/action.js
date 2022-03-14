@@ -1,25 +1,30 @@
-export function calculateValue(){
+export function calculateValue(value){
     return{
         type: "CALCULATE_VALUE",
+        payload: value
     }
 }
-export function inputValue(){
+export function inputValue(value){
     return{
         type: "INPUT_VALUE",
+        payload: value,
     }
 }
-export function numberValue(){
+export function numberValue(value){
     return{
-        type: "NUMBER_VALUE"
+        type: "NUMBER_VALUE",
+        payload: value,
     }
 }
-export function deleteValue(){
+export function deleteValue(value){
     return{
-        type: "DELETE_VALUE"
+        type: "DELETE_VALUE",
+        payload: value,
     }
 }
-export function resetValue(){
+export function resetValue(value){
     return{
-        type: "RESET_VALUE"
+        type: "RESET_VALUE",
+        payload: value,
     }
 }

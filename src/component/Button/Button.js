@@ -1,5 +1,4 @@
 import React from "react";
-// import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import {
@@ -16,38 +15,23 @@ import "./Button.css";
 export default function Button() {
   const dispatch = useDispatch();
   const result = useSelector((state) => state.result);
-  // const [result, setResult] = useState("");
 
   const handleChange = () => {
     dispatch(inputValue());
-    // setResult(result);
   };
 
   const handleClick = (event) => {
-    dispatch(numberValue());
-    // setResult(result + event.target.value);
-    // console.log(event.target.value);
+    dispatch(numberValue(event.target.value));
   };
 
   const handleDelete = () => {
-    dispatch(deleteValue());
-    // try {
-    //   setResult(result.slice(0, -1));
-    // } catch (error) {
-    //   setResult("");
-    // }
+    dispatch(deleteValue(result.slice(0, -1)));
   };
   const handleReset = () => {
-    dispatch(resetValue());
-    // setResult("");
+    dispatch(resetValue(""));
   };
   const handleResult = () => {
-    dispatch(calculateValue());
-    // try{
-    //   setResult(eval(result))
-    // }catch(error){
-    //   setResult("Error")
-    // }
+    dispatch(calculateValue(eval(result)));
   };
   return (
     <div>
