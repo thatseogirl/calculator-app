@@ -1,81 +1,89 @@
-.theme{
-	display: flex;
-	justify-content: space-between;
-  }
-.right{
-	position: relative;
-	bottom: 30px;
-	float: right;
-	display: flex;
-	justify-content: flex-end;
+.theme {
+  display: flex;
+  justify-content: space-between;
 }
-.control .box{
-	width: 60px;
-	height: 15px;
-	background-color: hsl(224, 36%, 15%);
-	border-radius: 30px;
-	position: relative;
-    left: 58px;
+.right {
+  position: relative;
+  bottom: 30px;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
 }
-.control #circle{
-	width: 15px;
-	height: 15px;
-	background-color: hsl(6, 63%, 50%);
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 1;
-	border-radius: 30px;
+.control .box {
+  width: 90px;
+  height: 15px;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 30px;
+  position: relative;
+  left: 83px;
 }
-  .toggle{
-	display: flex;
-	justify-content: space-between;
+.control #circle {
+  width: 15px;
+  height: 15px;
+  background-color: hsl(6, 63%, 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 30px;
 }
-.App.active1 .toggle h3{
-	color: #111;
+.toggle {
+  display: flex;
+  justify-content: space-between;
 }
-.App.active2 .toggle h3{
-	color: hsl(52, 100%, 62%);
+.App.active1 .toggle h3 {
+  color: #111;
 }
-h3{
-	color: #FFF;
+.App.active2 .toggle h3 {
+  color: hsl(52, 100%, 62%);
 }
-.control{
-	display: flex;
-	justify-content: center;
+h3 {
+  color: #fff;
 }
-.App.active1 .control .box{
-	background-color: var(--twotkbg);
+.control {
+  display: flex;
+  justify-content: center;
 }
-.App.active2 .control #circle{
-	background-color: hsl(176, 100%, 44%);
+.App.active1 .control .box {
+  background-color: var(--twotkbg);
 }
-.App.active1 .control #circle{
-	background-color: hsl(25, 98%, 40%);
+.App.active2 .control #circle {
+  background-color: hsl(176, 100%, 44%);
 }
-.right p{
-	color: white;
-	margin-right: 15px;
-	cursor: pointer;
+.App.active1 .control #circle {
+  background-color: hsl(25, 98%, 40%);
 }
-.control p{
-	color: #FFF;
-	cursor: pointer;
-	position: relative;
-    left: 48px;
-	text-transform: uppercase;
+.right p {
+  color: white;
+  margin-right: 15px;
+  cursor: pointer;
 }
-.App.active1 .control p{
-	color: #111;
+.control p {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  left: 48px;
+  text-transform: uppercase;
 }
-.App.active1 .right p{
-	color: #111;
-	cursor: pointer;
+.App.active1 .control p {
+  color: #111;
 }
-.App.active2 .control p{
-	color: hsl(52, 100%, 62%);
+.App.active1 .right p {
+  color: #111;
+  cursor: pointer;
 }
-.App.active2 .right p{
-	color: hsl(52, 100%, 62%);
-	cursor: pointer;
+.App.active2 .control p {
+  color: hsl(52, 100%, 62%);
+}
+.App.active2 .right p {
+  color: hsl(52, 100%, 62%);
+  cursor: pointer;
+}
+.button {
+  border: 4px;
+  width: 20px;
+  background-color: black;
+}
+.App.active1 .button {
+  background-color: #387f86;
 }

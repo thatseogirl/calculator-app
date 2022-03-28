@@ -1,14 +1,14 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import Button from "./component/Button/Button";
-import Theme from './component/Theme/Theme';
+import Theme from "./component/Theme/Theme";
 
 function App() {
   return (
     <div className="App">
-      <div className='main'>
-      <Theme />
-     <Button />
+      <div className="main">
+        <Theme />
+        <Button />
       </div>
     </div>
   );

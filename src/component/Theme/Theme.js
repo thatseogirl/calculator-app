@@ -15,7 +15,7 @@ export default function Theme() {
     let toggle = document.getElementById("circle");
     App.classList.add("active1");
     App.classList.remove("active2");
-    toggle.style.left = "36%";
+    toggle.style.left = "46%";
   };
 
   const handleThirdBackground = () => {
@@ -23,19 +23,19 @@ export default function Theme() {
     let toggle = document.getElementById("circle");
     App.classList.add("active2");
     App.classList.remove("active1");
-    toggle.style.left = "65%";
+    toggle.style.left = "85%";
   };
 
   return (
     <div className="title">
       <div className="right">
-        <p id="one" onClick={handleFirstBackground}>
+        <p id="one" className="button" onClick={handleFirstBackground}>
           1
         </p>
-        <p id="two" onClick={handleSecondBackground}>
+        <p id="two" className="button" onClick={handleSecondBackground}>
           2
         </p>
-        <p id="three" onClick={handleThirdBackground}>
+        <p id="three" className="button" onClick={handleThirdBackground}>
           3
         </p>
       </div>

@@ -1,7 +1,8 @@
 /* eslint-disable no-eval */
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux'
 import { useSelector } from "react-redux";
+import { FormControl } from "react-bootstrap";
 import {
   calculateValue,
   inputValue,
@@ -9,8 +10,6 @@ import {
   deleteValue,
   resetValue,
 } from "../../redux/action";
-
-import { FormControl } from "react-bootstrap";
 import "./Button.css";
 
 export default function Button() {
@@ -27,7 +26,7 @@ export default function Button() {
 
   const handleDelete = () => {
     dispatch(deleteValue(result.slice(0, -1)));
-  };
+  }
   const handleReset = () => {
     dispatch(resetValue(""));
   };
